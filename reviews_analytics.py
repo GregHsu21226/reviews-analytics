@@ -21,13 +21,24 @@ for d in data:
 
 print('留言的平均長度為: ', letter_count / len(data))
 
-#篩選留言長度大於100字者
+# 篩選留言長度大於100字者
 
 within100 = []
 for d in data:
 	if len(d) < 100:
 		within100.append(d)
 
-print('一共有', len(within100), '筆資料的留言長度小於100')
-print(within100[0]) # 印出第一筆小於100的資料看看
+print('一共有', len(within100), '筆留言長度小於100')
+print(within100[0]) # 印出第一筆長度小於100的留言看看
+
+# 篩選留言中有good者
+
+good = []
+for d in data:
+	if 'good' in d:
+		good.append(d)
+
+
+print('一共有', len(good), '筆留言包含\'good\'')
+print(good[0]) # 印出第一筆留言中有good者看看
 
